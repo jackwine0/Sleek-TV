@@ -1,0 +1,121 @@
+.row-item {
+  position: relative;
+  min-width: 250px; /* Adjust size as needed */
+  margin-right: 15px; /* Space between items */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Full width of row-item */
+  height: 350px; /* Adjust height as needed */
+}
+
+.row-img {
+  width: 100%;
+  height: 100%; /* Cover the full height of the container */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Black overlay with 80% opacity */
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+  color: #fff; /* White text color */
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.row-item:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.row-item:hover .row-img {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.like-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.like-icon {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.like-button:hover .like-icon {
+  color: #ff0000; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .row-item {
+      min-width: 220px; /* Adjust size for smaller screens */
+      margin-right: 10px; /* Reduce space between items */
+  }
+
+  .image-container {
+      height: 300px; /* Reduce height on smaller screens */
+  }
+
+  .overlay-text {
+      font-size: 0.9rem; /* Adjust text size */
+      padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row-item {
+      min-width: 180px; /* Further reduce size for tablets */
+      margin-right: 8px; /* Reduce space between items */
+  }
+
+  .image-container {
+      height: 250px; /* Adjust height on tablets */
+  }
+
+  .overlay-text {
+      font-size: 0.8rem; /* Smaller text size */
+      padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row-item {
+      min-width: 150px; /* Minimum size for mobile devices */
+      margin-right: 5px; /* Minimal space between items */
+  }
+
+  .image-container {
+      height: 200px; /* Smaller height for mobile */
+  }
+
+  .overlay-text {
+      font-size: 0.7rem; /* Further reduce text size */
+      padding: 5px;
+  }
+
+  .like-icon {
+      font-size: 20px; /* Smaller like icon */
+  }
+}

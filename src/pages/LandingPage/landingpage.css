@@ -1,0 +1,220 @@
+/* Global Styles */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(145deg, rgba(6, 6, 6, 1) 0%, rgba(88, 0, 0, 1) 100%);
+}
+
+/* Navbar Styles */
+.landing-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  margin: 20px;
+  padding: 20px;
+}
+
+.landing-navbar nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-left {
+  display: flex;
+  align-items: center;
+}
+
+.landing-logo {
+  height: 70px;
+  margin-right: 8px;
+}
+
+.landing-logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.landing-right .landing-login-button {
+  padding: 8px 16px;
+  background-color: #fff;
+  /* Primary color */
+  color: #580000;
+  /* White text */
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: large;
+  font-weight: bold;
+  border-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-right .landing-login-button:hover {
+  background-color: #8a0000;
+  color: white;
+  /* Darker shade on hover */
+}
+
+/* Content Styles */
+.landing-content {
+  margin-top: 100px;
+  /* Adjusted to make room for navbar */
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Content shadow */
+}
+
+.landing-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.landing-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.landing-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Email Form Styles */
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.email-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.landing-button-primary {
+  background-color: #580000;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  height: 38px;
+  width: 200px;
+  border-color: #fff;
+}
+
+.landing-button-primary:hover {
+  background-color: #8a0000;
+  /* Darker shade on hover */
+}
+
+/* Footer Styles */
+.landing-footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent footer background */
+  width: 100%;
+  text-align: center;
+}
+
+.landing-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.landing-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.landing-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 36px;
+  }
+
+  .landing-content h2 {
+    font-size: 20px;
+  }
+
+  .landing-content p {
+    font-size: 16px;
+  }
+
+  .landing-left {
+    padding: 20px;
+  }
+
+  .landing-right {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .landing-logo {
+    height: 50px;
+  }
+
+  .landing-logo-text {
+    font-size: 20px;
+  }
+
+  .landing-login-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .landing-content h1 {
+    font-size: 28px;
+  }
+
+  .landing-content h2 {
+    font-size: 18px;
+  }
+
+  .landing-content p {
+    font-size: 14px;
+  }
+
+  .landing-button-primary {
+    width: 100%;
+  }
+}

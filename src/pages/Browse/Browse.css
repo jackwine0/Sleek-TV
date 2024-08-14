@@ -1,0 +1,28 @@
+.browse-page {
+    padding: 20px;
+  }
+  
+  .category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .category-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .category-button.active {
+    background-color: #555;
+  }
+  
+  .category-button:hover {
+    background-color: #333;
+  }
+  

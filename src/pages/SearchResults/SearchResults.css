@@ -1,0 +1,88 @@
+/* Container for the entire search results page */
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    background: linear-gradient(145deg, rgba(6, 6, 6, 1) 0%, rgba(88, 0, 0, 1) 100%);
+
+  }
+  
+  /* Each movie card container */
+  .movie-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Movie poster image styling */
+  .movie-card__poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid #444;
+  }
+  
+  /* Container for movie details like title and release date */
+  .movie-card__details {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .movie-card__title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .movie-card__release-date {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Link styling for each movie card */
+  .movie-link {
+    text-decoration: none;
+  }
+  
+  /* Pagination container */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Styling for pagination buttons */
+
+  
+  @media (max-width: 1200px) {
+    .search-results {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .search-results {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-results {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .search-results {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

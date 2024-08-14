@@ -1,0 +1,54 @@
+/* Tab Navigation CSS */
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allows tabs to wrap to the next line on smaller screens */
+}
+
+.tab-button {
+  margin: 5px 10px; /* Adjust margins for better spacing on smaller screens */
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.tab-button.active {
+  background-color: #777;
+  transform: scale(1.05);
+  font-weight: bold;
+  font-size: large;
+}
+
+.tab-button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tab-button {
+      padding: 8px 15px; /* Adjust padding for smaller screens */
+      font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .tab-navigation {
+      margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+      padding: 6px 10px; /* Further adjust padding for very small screens */
+      font-size: 0.8rem; /* Further reduce font size */
+      margin: 5px; /* Reduce margin to fit more tabs */
+  }
+
+  .tab-navigation {
+      margin-bottom: 10px; /* Further adjust margin */
+  }
+}

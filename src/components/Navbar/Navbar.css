@@ -1,0 +1,221 @@
+/* Navbar.css */
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.navbarO {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+}
+
+.navbarO.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navO {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navlinks {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+  color: #8a0000;
+}
+
+.navbar__icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  position: relative;
+  cursor: pointer;
+  margin-right: 30px;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.1);
+}
+
+.profile-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.profile-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-dropdown li {
+  margin-bottom: 10px;
+}
+
+.profile-dropdown li:last-child {
+  margin-bottom: 0;
+}
+
+.profile-dropdown a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.profile-dropdown a:hover {
+  color: #8a0000;
+}
+
+.search{
+  background-color: #8a0000;
+  height: 40px;
+  text-align: center;
+  align-content: center;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search:hover{
+  color: #000;
+  background-color: #fff;
+}
+
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  height: 25px;
+  justify-self: first baseline;
+  cursor: pointer;
+}
+/* Add this to your existing CSS */
+.hamburger img {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 568px) {
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99;
+  }
+
+  .profile-avatar img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+
+  .search{
+    background-color: #8a0000;
+    height: 25px;
+    text-align: center;
+    align-content: center;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .navlinks.show {
+    display: flex;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 25px;
+  }
+
+  .nav__links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+    
+  }
+
+ 
+}
+

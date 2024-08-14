@@ -1,0 +1,155 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden; /* Prevents overflow of children elements */
+}
+
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns text at the bottom */
+    padding: 2rem; /* Adds padding for text */
+    box-sizing: border-box;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers entire section */
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: left; /* Align text to the left */
+    z-index: 1;
+    max-width: 600px;
+    margin-bottom: 10px; /* Optional: Limits width of text content */
+}
+
+.movie-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.movie-description {
+    font-size: 1rem;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: space-between; /* Distributes buttons to edges */
+    z-index: 1;
+    width: 100%;
+    max-width: 600px; /* Optional: Aligns with text width */
+}
+
+.hero-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-button-left {
+    align-self: flex-start;
+    font-weight: bold; /* Aligns to the left */
+}
+
+.hero-button-right {
+    align-self: flex-end;
+    font-weight: bold; /* Aligns to the right */
+}
+
+.trailer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+.trailer-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 60%;
+    background: black;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1rem;
+        max-width: 100%; /* Allow text to fill more space */
+    }
+
+    .movie-title {
+        font-size: 2rem;
+    }
+
+    .movie-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px; /* Add space between buttons */
+        align-items: stretch; /* Align buttons to stretch across width */
+    }
+
+    .hero-button {
+        width: 100%; /* Make buttons full width */
+        text-align: center;
+    }
+
+    .hero-button-left,
+    .hero-button-right {
+        align-self: center; /* Center the buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-background {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .movie-title {
+        font-size: 1.5rem;
+    }
+
+    .movie-description {
+        font-size: 0.8rem;
+    }
+
+    .hero-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem; /* Reduce button font size */
+    }
+}

@@ -1,0 +1,108 @@
+/* Footer.css */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 20px;
+  flex-wrap: wrap; /* Allows wrapping of content on smaller screens */
+}
+
+.footer-links,
+.footer-logo,
+.footer-tc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Adds space between sections on smaller screens */
+}
+
+.foot-links,
+.tc-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.foot-links li,
+.tc-links li {
+  margin: 5px 0;
+}
+
+.foot-links li a,
+.tc-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.foot-links li a:hover,
+.tc-links li a:hover {
+  color: #580000; /* Hover effect color */
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.foot-logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.nav-logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff; /* White color for text */
+}
+
+.footer-logo p {
+  margin: 5px 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      padding: 15px;
+  }
+
+  .footer-links,
+  .footer-logo,
+  .footer-tc {
+      margin-bottom: 15px; /* Add space between sections */
+      width: 100%; /* Ensure full width for each section */
+  }
+
+  .foot-links,
+  .tc-links {
+      align-items: center; /* Center-align links on smaller screens */
+  }
+
+  .nav-logo-text {
+      font-size: 1rem; /* Reduce font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      padding: 10px;
+  }
+
+  .foot-logo {
+      width: 40px; /* Adjust logo size for smaller screens */
+  }
+
+  .nav-logo-text {
+      font-size: 0.9rem; /* Further reduce font size on very small screens */
+  }
+}
