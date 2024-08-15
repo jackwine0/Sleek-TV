@@ -1,166 +1,165 @@
 /* Profile Page Styles */
 .profile-page {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .profile-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
 padding: 30px;
 }
-  
-  .user-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-  }
-  
-  .user-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .user-info h2 {
-    margin: 0;
-    font-size: 28px;
-    color: white;
-  }
-  
-  .user-info p {
-    margin: 5px 0 20px;
-    font-size: 18px;
-    color: white;
-  }
-  
-  .edit-profile-button {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    align-self: flex-start;
-  }
-  
-  .edit-profile-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
- 
- 
-  /* Empty Watchlist */
+
+.user-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 28px;
+  color: white;
+}
+
+.user-info p {
+  margin: 5px 0 20px;
+  font-size: 18px;
+  color: white;
+}
+
+.edit-profile-button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.edit-profile-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
 
 
-  
-  /* Popup Overlay */
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  /* Popup Card */
+/* Empty Watchlist */
+
+
+
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Card */
+.popup-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1001;
+}
+
+/* Close Icon */
+.popup-close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Popup Card Content */
+.popup-card h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.popup-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+/* Save Button */
+.save-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.save-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
   .popup-card {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 10px;
-    width: 400px;
-    max-width: 90%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1001;
+    padding: 20px;
   }
-  
-  /* Close Icon */
-  .popup-close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #fff;
-  }
-  
-  /* Popup Card Content */
-  .popup-card h2 {
-    margin-bottom: 20px;
+
+  .user-info h2 {
     font-size: 24px;
-    color: #fff;
   }
-  
-  .popup-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .popup-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+
+  .user-info p {
     font-size: 16px;
-    margin-bottom: 15px;
-    outline: none;
   }
-  
-  /* Save Button */
-  .save-button {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 100%;
+
+  .edit-profile-button {
+    font-size: 14px;
   }
-  
-  .save-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+
+  .watchlist-item {
+    flex: 1 1 calc(50% - 20px);
   }
-  
-  /* Responsive Styling */
-  @media (max-width: 480px) {
-    .popup-card {
-      padding: 20px;
-    }
-  
-    .user-info h2 {
-      font-size: 24px;
-    }
-  
-    .user-info p {
-      font-size: 16px;
-    }
-  
-    .edit-profile-button {
-      font-size: 14px;
-    }
-  
-    .watchlist-item {
-      flex: 1 1 calc(50% - 20px);
-    }
-  }
-  
+}
