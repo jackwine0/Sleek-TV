@@ -6,45 +6,23 @@ const Signup = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault(); // Prevent the default form submission
-
-    const userData = {
+    
+    // Just log the data for now (no authentication)
+    console.log("Form submitted:", {
       firstName,
       lastName,
       email,
       password,
-    };
-
-    try {
-      const response = await fetch("https://sleek-tv.onrender.com/api/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setSuccess("Sign-up successful! Redirecting...");
-        setError("");
-        // Optionally, redirect to another page or handle post-signup actions
-        setTimeout(() => {
-          window.location.href = "/login"; // Redirect to login page
-        }, 2000);
-      } else {
-        const errorData = await response.json();
-        setError(errorData.message || "Sign-up failed. Please try again.");
-        setSuccess("");
-      }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
-      setSuccess("");
-    }
+    });
+    
+    // Optionally reset form
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -130,8 +108,6 @@ const Signup = () => {
             <button type="submit" className="button primary">
               Sign Up
             </button>
-            {error && <p className="form-error">{error}</p>}
-            {success && <p className="form-success">{success}</p>}
           </form>
           <div className="text-center text-sm">
             Already have an account?{" "}

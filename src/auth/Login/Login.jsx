@@ -5,45 +5,22 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault(); // Prevent the default form submission
-
-    const userData = {
+    
+    // Just log the data for now (no authentication)
+    console.log("Login submitted:", {
       email,
       password,
-    };
-
-    try {
-      const response = await fetch("https://sleek-tv.onrender.com/api/login-user", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setSuccess("Login successful! Redirecting...");
-        setError("");
-        // Optionally, store authentication token or user data
-        localStorage.setItem("authToken", data.token); // Example token storage
-        setTimeout(() => {
-          navigate("/home"); // Redirect to home page
-        }, 2000);
-      } else {
-        const errorData = await response.json();
-        setError(errorData.message || "Login failed. Please try again.");
-        setSuccess("");
-      }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
-      setSuccess("");
-    }
+    });
+    
+    // Optionally reset form
+    setEmail("");
+    setPassword("");
+    
+    navigate("/home");
   };
 
   return (
@@ -101,8 +78,6 @@ const Login = () => {
             <button type="submit" className="button primary">
               Login
             </button>
-            {error && <p className="form-error">{error}</p>}
-            {success && <p className="form-success">{success}</p>}
           </form>
           <div className="text-center text-sm">
             Don&apos;t have an account?{" "}
